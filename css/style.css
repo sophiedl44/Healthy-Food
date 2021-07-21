@@ -1,0 +1,2214 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,500,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Philosopher:700&display=swap);
+.title h2 {
+  font-family: Philosopher;
+  font-weight: bold;
+  font-size: 31.25px;
+  color: #150C01;
+}
+
+.subtitle h3 {
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #DC780B;
+  opacity: 0.7;
+  font-weight: 500;
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 150%;
+  color: #150C01;
+  opacity: 0.7;
+}
+
+.button {
+  font-size: 16px;
+  color: #FFFFFF;
+  background: #DC780B;
+  border-radius: 5px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.button:hover {
+  background-color: #C0690A;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.button:active {
+  top: 2px;
+  background-color: #C0690A;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body, html {
+  height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+body._lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.header__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+  min-height: 90px;
+}
+
+.header__logo {
+  position: relative;
+  z-index: 5;
+  margin: 0px 35px 0px 0px;
+}
+
+.header__menu {
+  width: 93%;
+}
+
+.header__columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu__icon {
+  display: none;
+}
+
+.menu__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__list > li {
+  position: relative;
+  margin: 0px 40px 0px 0px;
+}
+
+.menu__link {
+  font-size: 16px;
+  color: #150C01;
+  opacity: 0.6;
+  font-weight: 500;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.menu__link:hover {
+  color: #DC780B;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.menu__link:active {
+  color: #995C1A;
+  top: 2px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.header__button a {
+  width: 155px;
+  height: 46px;
+}
+
+body._touch .menu__list > li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body._touch .menu__link {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+@media (min-width: 767px) {
+  .menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .menu__list > li {
+    padding: 10px 0;
+  }
+}
+@media (max-width: 767px) {
+  .menu__icon {
+    z-index: 5;
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+  }
+
+  .menu__icon span,
+.menu__icon::before,
+.menu__icon::after {
+    left: 0;
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    background-color: #000;
+  }
+
+  .menu__icon::before,
+.menu__icon::after {
+    content: "";
+  }
+
+  .menu__icon::before {
+    top: 0;
+  }
+
+  .menu__icon::after {
+    bottom: 0;
+  }
+
+  .menu__icon span {
+    top: 50%;
+    -webkit-transform: scale(1) translate(0px, -50%);
+            transform: scale(1) translate(0px, -50%);
+  }
+
+  .menu__icon._active span {
+    -webkit-transform: scale(0) translate(0px, -50%);
+            transform: scale(0) translate(0px, -50%);
+  }
+
+  .menu__icon._active::before {
+    top: 50%;
+    -webkit-transform: rotate(-45deg) translate(0px, -50%);
+            transform: rotate(-45deg) translate(0px, -50%);
+  }
+
+  .menu__icon._active::after {
+    bottom: 50%;
+    -webkit-transform: rotate(45deg) translate(0px, 50%);
+            transform: rotate(45deg) translate(0px, 50%);
+  }
+
+  .menu__body {
+    position: fixed;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 120px 30px 30px 30px;
+    -webkit-transition: top 0.3s ease 0s;
+    transition: top 0.3s ease 0s;
+    overflow: auto;
+  }
+
+  .menu__body._active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    top: 0;
+    left: 0;
+  }
+
+  .menu__body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 90px;
+    background-color: #fff;
+    z-index: 2;
+  }
+
+  .menu__list > li {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0px 0px 30px 0px;
+  }
+
+  .menu__link {
+    font-size: 24px;
+    color: #fff;
+  }
+
+  .header__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .header__menu {
+    width: 204px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+
+  .menu__icon {
+    margin: 0px 0px 0px 20px;
+  }
+}
+.welcome {
+  padding: 90px 15px 0 15px;
+  margin: 0px 0px 116px 0px;
+}
+
+.welcome__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.welcome__text {
+  width: 545px;
+  margin: 0px 15px 0px 0px;
+}
+
+.welcome__title {
+  margin: 0px 0px 42px 0px;
+}
+.welcome__title h1 {
+  font-family: Philosopher;
+  font-weight: bold;
+  font-size: 48.83px;
+  line-height: 118%;
+  color: #150C01;
+}
+
+.welcome__description {
+  margin: 0px 0px 50px 0px;
+}
+.welcome__description p {
+  font-weight: 500;
+}
+
+.welcome__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.welcome__buttonone {
+  margin: 0px 30px 0px 0px;
+}
+.welcome__buttonone a {
+  width: 158px;
+  height: 60px;
+}
+
+.welcome__buttontwo a {
+  width: 170px;
+  height: 60px;
+  background-color: #fff;
+  color: #dc780b;
+  border: 1.5px solid rgba(220, 120, 11, 0.2);
+  border-radius: 5px;
+}
+.welcome__buttontwo a:hover {
+  background-color: #EFEFEF;
+}
+.welcome__buttontwo a:active {
+  background-color: #EFEFEF;
+}
+
+.welcome__image {
+  height: 530px;
+}
+.welcome__image img {
+  width: 100%;
+  height: 557px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .welcome__text {
+    width: 730px;
+    margin: 0px 15px 0px 0px;
+  }
+
+  .welcome__image {
+    height: 490px;
+  }
+  .welcome__image img {
+    width: 100%;
+    height: 490px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+/* Landscape phones and portrait tablets, телефоны лопаты */
+@media (max-width: 767px) {
+  .welcome {
+    margin: 0px 0px 80px 0px;
+  }
+
+  .welcome__row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .welcome__text {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  .welcome__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .welcome__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0px 10px 15px 0px;
+  }
+  .welcome__image img {
+    width: 60%;
+    height: 100%;
+  }
+
+  .welcome__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px 0px 20px 0px;
+  }
+  .welcome__title h1 {
+    font-size: 36px;
+    line-height: 94%;
+    width: 85%;
+  }
+
+  .welcome__description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px 0px 30px 0px;
+  }
+  .welcome__description p {
+    width: 88%;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+@media (max-width: 480px) {
+  .welcome {
+    margin: 0px 0px 50px 0px;
+  }
+
+  .welcome__buttons {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .welcome__description {
+    margin: 0px 0px 20px 0px;
+  }
+  .welcome__description p {
+    width: 100%;
+  }
+
+  .welcome__title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0px 0px 20px 0px;
+  }
+  .welcome__title h1 {
+    font-size: 28px;
+    line-height: 90%;
+    width: 85%;
+  }
+}
+@media (max-width: 388px) {
+  .welcome__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .welcome__buttonone {
+    margin: 0px 0px 15px 0px;
+  }
+}
+.features {
+  padding: 0 30px;
+  margin: 0px 0px 120px 0px;
+}
+
+.features__subtitle {
+  text-align: center;
+  margin: 0px 0px 6px 0px;
+}
+
+.features__title {
+  text-align: center;
+  margin: 0px 0px 40px 0px;
+}
+
+.features__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.features__column {
+  margin: 0px 20px 0px 0px;
+}
+.features__column:last-child {
+  margin: 0;
+}
+
+.features-item {
+  width: 300px;
+}
+
+.features-item__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 0px 30px 0px;
+}
+.features-item__imagecontainer1 {
+  width: 88px;
+  height: 88px;
+  padding: 20px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(143, 173, 51, 0.1);
+}
+
+.features-item__imagecontainer2 {
+  width: 88px;
+  height: 88px;
+  padding: 20px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(230, 77, 51, 0.08);
+}
+
+.features-item__imagecontainer3 {
+  width: 88px;
+  height: 88px;
+  padding: 20px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(224, 122, 10, 0.1);
+}
+
+.features-item__title {
+  text-align: center;
+  margin: 0px 0px 15px 0px;
+}
+.features-item__title h2 {
+  font-size: 25px;
+}
+
+.features-item__text p {
+  text-align: center;
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .features-item {
+    width: 100%;
+  }
+}
+/* Landscape phones and portrait tablets, телефоны лопаты */
+@media (max-width: 767px) {
+  .features {
+    padding: 0 15px;
+    margin: 0px 0px 80px 0px;
+  }
+
+  .features-item {
+    width: 100%;
+  }
+
+  .features-item__text p {
+    font-size: 14px;
+    line-height: 100%;
+  }
+
+  .features__column {
+    margin: 0px 20px 0px 0px;
+  }
+  .features__column:last-child {
+    margin: 0;
+  }
+
+  .features-item__title {
+    margin: 0px 0px 10px 0px;
+  }
+  .features-item__title h2 {
+    font-size: 20px;
+  }
+
+  .features-item__image {
+    margin: 0px 0px 15px 0px;
+  }
+
+  .features__title {
+    margin: 0px 0px 20px 0px;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+@media (max-width: 480px) {
+  .features {
+    margin: 0px 0px 40px 0px;
+  }
+
+  .features__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .features__column {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .features-item__imagecontainer1 {
+    width: 66px;
+    height: 66px;
+    padding: 14px;
+  }
+  .features-item__imagecontainer1 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .features-item__imagecontainer2 {
+    width: 66px;
+    height: 66px;
+    padding: 14px;
+  }
+  .features-item__imagecontainer2 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .features-item__imagecontainer3 {
+    width: 66px;
+    height: 66px;
+    padding: 14px;
+  }
+  .features-item__imagecontainer3 img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .features-item__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .features-item__text p {
+    width: 87%;
+  }
+
+  .features-item__image {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .features__column {
+    margin: 0px 0px 12px 0px;
+  }
+}
+.aboutus {
+  padding: 0 15px;
+  margin: 0px 0px 120px 0px;
+}
+
+.aboutus__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.aboutus__image {
+  width: 555px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 35px;
+  margin: 0px 15px 0px 0px;
+}
+.aboutus__image img {
+  width: 765px;
+  height: 580px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: -5px 0 0 0px;
+}
+
+.aboutus__description {
+  width: 476px;
+}
+
+.aboutus__subtitle {
+  margin: 0px 0px 10px 0px;
+}
+
+.aboutus__title {
+  margin: 0px 0px 30px 0px;
+}
+
+.aboutus__text {
+  margin: 0px 0px 30px 0px;
+}
+
+.aboutus__button a {
+  width: 142px;
+  height: 42px;
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .aboutus__image {
+    width: 495px;
+    height: 480px;
+  }
+  .aboutus__image img {
+    width: 630px;
+    height: 580px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: -5px 0 0 0;
+  }
+}
+/* Landscape phones and portrait tablets, телефоны лопаты */
+@media (max-width: 767px) {
+  .aboutus {
+    margin: 0px 0px 80px 0px;
+  }
+
+  .aboutus__image {
+    width: 530px;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 35px;
+    margin: 0px 15px 0px 0px;
+  }
+  .aboutus__image img {
+    width: 530px;
+    margin: -15px 0 0 0px;
+  }
+
+  .aboutus__text p {
+    line-height: 100%;
+  }
+
+  .aboutus__title {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .aboutus__subtitle {
+    margin: 0px 0px 6px 0px;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+@media (max-width: 480px) {
+  .aboutus {
+    margin: 0px 0px 40px 0px;
+  }
+
+  .aboutus__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .aboutus__image {
+    width: 100%;
+    height: 285px;
+    margin: 0px 0px 15px 0px;
+  }
+  .aboutus__image img {
+    width: 120%;
+    height: 395px;
+    margin: -41px 0px 0px 0px;
+  }
+
+  .aboutus__description {
+    width: 100%;
+  }
+
+  .aboutus__title h2 {
+    font-size: 28px;
+  }
+
+  .aboutus__text {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .aboutus__text p {
+    line-height: 107%;
+  }
+}
+.menufood {
+  padding: 0 15px;
+  margin: 0px 0px 120px 0px;
+}
+
+.menufood__subtitle {
+  text-align: center;
+  margin: 0px 0px 9px 0px;
+}
+
+.menufood__title {
+  text-align: center;
+  margin: 0px 0px 25px 0px;
+}
+
+.menufood__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 0px 0px 60px 0px;
+}
+.menufood__text p {
+  width: 747px;
+}
+
+.menufood__row {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: 360px 30px 360px 30px 360px;
+  grid-template-columns: repeat(3, 360px);
+  -ms-grid-rows: 1fr 30px 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+  margin: 0px 0px 50px 0px;
+}
+
+.menufood__row > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.menufood__row > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.menufood__row > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.menufood__row > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+
+.menufood__row > *:nth-child(5) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+
+.menufood__row > *:nth-child(6) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 5;
+}
+
+.menufood-item {
+  width: 360px;
+  height: 446px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 75px 10px 10px 10px;
+}
+
+.menufood-item__image {
+  width: 358px;
+  height: 264px;
+  margin: 0px 0px 20px 0px;
+}
+.menufood-item__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 74px 0 75px 0px;
+}
+
+.menufood-item__title_and_money {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+  margin: 0px 0px 20px 0px;
+}
+
+.menufood-item__title h2 {
+  font-size: 25px;
+}
+
+.menufood-item__money h2 {
+  font-size: 25px;
+}
+
+.menufood-item__text {
+  padding: 0 20px;
+  margin: 0px 0px 20px 0px;
+}
+
+.menufood-item__plus_and_starsraiting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+}
+
+.menufood-item__plus a {
+  width: 36px;
+  height: 34px;
+  background: #DC780B;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.menufood-item__plus a:hover {
+  background-color: #C0690A;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.menufood-item__plus a:active {
+  top: 2px;
+  background-color: #C0690A;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+.plus {
+  font-size: 20px;
+  color: #fff;
+}
+
+.form_label {
+  margin: 0px 0px 10px 0px;
+}
+
+.first-raiting {
+  position: relative;
+  font-size: 26px;
+  display: inline-block;
+}
+.first-raiting::before {
+  content: "★★★★★";
+  display: block;
+}
+
+.first-raiting__items {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+.first-raiting__item {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.first-raiting__label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  height: 100%;
+  cursor: pointer;
+  color: #fff;
+}
+.first-raiting__label::before {
+  content: "★";
+  display: block;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.first-raiting__item:checked,
+.first-raiting__item:checked ~ .first-raiting__label {
+  color: #DC780B;
+}
+
+.first-raiting__label:hover,
+.first-raiting__label:hover ~ .first-raiting__label,
+.first-raiting__label:checked ~ .first-raiting__label:hover {
+  color: #FFBA70;
+}
+
+.form_label {
+  margin: 0px 0px 10px 0px;
+}
+
+.second-raiting {
+  position: relative;
+  font-size: 26px;
+  display: inline-block;
+}
+.second-raiting::before {
+  content: "★★★★★";
+  display: block;
+}
+
+.second-raiting__items {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+.second-raiting__item {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.second-raiting__label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  height: 100%;
+  cursor: pointer;
+  color: #fff;
+}
+.second-raiting__label::before {
+  content: "★";
+  display: block;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.second-raiting__item:checked,
+.second-raiting__item:checked ~ .second-raiting__label {
+  color: #DC780B;
+}
+
+.second-raiting__label:hover,
+.second-raiting__label:hover ~ .second-raiting__label,
+.second-raiting__label:checked ~ .second-raiting__label:hover {
+  color: #FFBA70;
+}
+
+.form_label {
+  margin: 0px 0px 10px 0px;
+}
+
+.third-raiting {
+  position: relative;
+  font-size: 26px;
+  display: inline-block;
+}
+.third-raiting::before {
+  content: "★★★★★";
+  display: block;
+}
+
+.third-raiting__items {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+.third-raiting__item {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.third-raiting__label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  height: 100%;
+  cursor: pointer;
+  color: #fff;
+}
+.third-raiting__label::before {
+  content: "★";
+  display: block;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.third-raiting__item:checked,
+.third-raiting__item:checked ~ .third-raiting__label {
+  color: #DC780B;
+}
+
+.third-raiting__label:hover,
+.third-raiting__label:hover ~ .third-raiting__label,
+.third-raiting__label:checked ~ .third-raiting__label:hover {
+  color: #FFBA70;
+}
+
+.form_label {
+  margin: 0px 0px 10px 0px;
+}
+
+.fourth-raiting {
+  position: relative;
+  font-size: 26px;
+  display: inline-block;
+}
+.fourth-raiting::before {
+  content: "★★★★★";
+  display: block;
+}
+
+.fourth-raiting__items {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+.fourth-raiting__item {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.fourth-raiting__label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  height: 100%;
+  cursor: pointer;
+  color: #fff;
+}
+.fourth-raiting__label::before {
+  content: "★";
+  display: block;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.fourth-raiting__item:checked,
+.fourth-raiting__item:checked ~ .fourth-raiting__label {
+  color: #DC780B;
+}
+
+.fourth-raiting__label:hover,
+.fourth-raiting__label:hover ~ .fourth-raiting__label,
+.fourth-raiting__label:checked ~ .fourth-raiting__label:hover {
+  color: #FFBA70;
+}
+
+.form_label {
+  margin: 0px 0px 10px 0px;
+}
+
+.fifth-raiting {
+  position: relative;
+  font-size: 26px;
+  display: inline-block;
+}
+.fifth-raiting::before {
+  content: "★★★★★";
+  display: block;
+}
+
+.fifth-raiting__items {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+.fifth-raiting__item {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.fifth-raiting__label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  height: 100%;
+  cursor: pointer;
+  color: #fff;
+}
+.fifth-raiting__label::before {
+  content: "★";
+  display: block;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.fifth-raiting__item:checked,
+.fifth-raiting__item:checked ~ .fifth-raiting__label {
+  color: #DC780B;
+}
+
+.fifth-raiting__label:hover,
+.fifth-raiting__label:hover ~ .fifth-raiting__label,
+.fifth-raiting__label:checked ~ .fifth-raiting__label:hover {
+  color: #FFBA70;
+}
+
+.form_label {
+  margin: 0px 0px 10px 0px;
+}
+
+.sixth-raiting {
+  position: relative;
+  font-size: 26px;
+  display: inline-block;
+}
+.sixth-raiting::before {
+  content: "★★★★★";
+  display: block;
+}
+
+.sixth-raiting__items {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+.sixth-raiting__item {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.sixth-raiting__label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  height: 100%;
+  cursor: pointer;
+  color: #fff;
+}
+.sixth-raiting__label::before {
+  content: "★";
+  display: block;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.sixth-raiting__item:checked,
+.sixth-raiting__item:checked ~ .sixth-raiting__label {
+  color: #DC780B;
+}
+
+.sixth-raiting__label:hover,
+.sixth-raiting__label:hover ~ .sixth-raiting__label,
+.sixth-raiting__label:checked ~ .sixth-raiting__label:hover {
+  color: #FFBA70;
+}
+
+.menufood__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.menufood__button a {
+  width: 142px;
+  height: 42px;
+  color: #dc780b;
+  border: 1px solid rgba(220, 120, 11, 0.2);
+  border-radius: 5px;
+  background-color: #fff;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.menufood__button a:hover {
+  background-color: #EFEFEF;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.menufood__button a:active {
+  background-color: #EFEFEF;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .menufood__row {
+    -ms-grid-columns: (auto)[3];
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .menufood-item {
+    width: 100%;
+  }
+
+  .menufood-item__image {
+    width: 100%;
+  }
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menufood__row {
+    -ms-grid-columns: auto 10px auto 10px auto;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+  }
+
+  .menufood-item {
+    width: 100%;
+    height: 360px;
+  }
+
+  .menufood-item__image {
+    width: 100%;
+    height: 50%;
+    margin: 0px 0px 15px 0px;
+  }
+
+  .menufood-item__title_and_money {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .menufood-item__text {
+    margin: 0px 0px 10px 0px;
+  }
+}
+/* Landscape phones and portrait tablets, телефоны лопаты */
+@media (max-width: 767px) {
+  .menufood {
+    margin: 0px 0px 80px 0px;
+  }
+
+  .menufood__row {
+    -ms-grid-columns: 50% 10px 50%;
+    grid-template-columns: repeat(2, 50%);
+    -ms-grid-rows: ;
+    grid-template-rows: repeat(4fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    margin: 0px 0px 30px 0px;
+  }
+
+  .menufood__row > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .menufood__row > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .menufood__row > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .menufood__row > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+
+  .menufood__row > *:nth-child(5) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+
+  .menufood__row > *:nth-child(6) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
+
+  .menufood__row > *:nth-child(7) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+  }
+
+  .menufood__row > *:nth-child(8) {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+  }
+
+  .menufood-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .menufood-item__image {
+    width: 100%;
+    height: 50%;
+    margin: 0px 0px 15px 0px;
+  }
+
+  .menufood-item__title_and_money {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    padding: 0 10px;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .menufood-item__title h2 {
+    font-size: 20px;
+  }
+
+  .menufood-item__money h2 {
+    font-size: 24px;
+  }
+
+  .menufood-item__text {
+    padding: 0 10px;
+    margin: 0px 0px 10px 0px;
+  }
+
+  .menufood-item__title {
+    padding: 0 30px 0 0;
+  }
+
+  .menufood-item__plus_and_starsraiting {
+    padding: 0 10px;
+    margin: 0px 0px 15px 0px;
+  }
+
+  .menufood__title {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .menufood__text {
+    margin: 0px 0px 30px 0px;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+@media (max-width: 480px) {
+  .menufood {
+    margin: 0px 0px 40px 0px;
+  }
+
+  .menufood__row {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: none;
+    grid-template-rows: none;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;
+    margin: 0px 0px 30px 0px;
+  }
+
+  .menufood__row > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .menufood__text p {
+    width: 100%;
+    line-height: 107%;
+  }
+
+  .menufood-item {
+    width: 100%;
+    height: auto;
+  }
+
+  .menufood-item__image {
+    width: 100%;
+    height: 50%;
+    margin: 0px 0px 15px 0px;
+  }
+
+  .menufood-item__text p {
+    line-height: 107%;
+  }
+
+  .menufood__title h2 {
+    font-size: 28px;
+  }
+}
+.takeaway {
+  background-color: rgba(251, 241, 231, 0.4);
+  height: 518px;
+  margin: 60px 0px 140px 0px;
+}
+
+.takeaway__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.takeaway__description {
+  width: 543px;
+  margin: 0px 0px 100px 0px;
+}
+
+.takeaway__subtitle {
+  text-align: left;
+  margin: 0px 0px 5px 0px;
+}
+
+.takeaway__title {
+  margin: 0px 0px 28px 0px;
+}
+
+.takeaway__text {
+  margin: 0px 0px 39px 0px;
+}
+
+.takeaway__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.takeaway__buttonone {
+  margin: 0px 30px 0px 0px;
+}
+.takeaway__buttonone a {
+  width: 163px;
+  height: 48px;
+  background-color: #150C01;
+}
+.takeaway__buttonone a:hover {
+  background-color: #150C01;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.takeaway__buttonone a:active {
+  top: 2px;
+  color: #D2D2D2;
+  background-color: #000;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.takeaway__buttonone a span {
+  margin: 4px 0px 0px 8px;
+}
+
+.takeaway__buttontwo a {
+  width: 179px;
+  height: 48px;
+  border: 1.5px solid rgba(21, 12, 1, 0.1);
+  border-radius: 5px;
+  background-color: #fff;
+  color: #150C01;
+  font-weight: 500;
+}
+.takeaway__buttontwo a:hover {
+  background-color: #E3E3E3;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.takeaway__buttontwo a:active {
+  top: 2px;
+  background-color: #E3E3E3;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+.takeaway__buttontwo a span {
+  margin: 4px 0px 0px 8px;
+}
+
+.takeaway__image img {
+  width: 323.14px;
+  height: 651px;
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+  display: inline-block;
+}
+
+.takeaway__imagefull {
+  display: none;
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+  .takeaway {
+    padding: 0 15px;
+    height: 500px;
+    margin: 60px 0px 120px 0px;
+  }
+
+  .takeaway__image img {
+    width: 323.14px;
+    height: 605px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+
+  .takeaway__description {
+    width: 543px;
+    margin: 0px 0px 80px 0px;
+  }
+}
+/* Landscape phones and portrait tablets, телефоны лопаты */
+@media (max-width: 767px) {
+  .takeaway {
+    padding: 0 15px;
+    height: 450px;
+    margin: 60px 0px 80px 0px;
+  }
+
+  .takeaway__row {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .takeaway__image {
+    width: 50%;
+  }
+  .takeaway__image img {
+    width: 100%;
+    height: 500px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+  }
+
+  .takeaway__description {
+    width: 63%;
+    margin: 0px 10px 30px 0px;
+  }
+
+  .takeaway__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .takeaway__buttonone {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .takeaway__text {
+    margin: 0px 0px 30px 0px;
+  }
+  .takeaway__text p {
+    line-height: 100%;
+  }
+
+  .takeaway__title {
+    margin: 0px 0px 20px 0px;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+@media (max-width: 480px) {
+  .takeaway {
+    margin: 0px 0px 40px 0px;
+  }
+
+  .takeaway__row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .takeaway__image {
+    width: 110%;
+    margin: 0px 0px 10px 0px;
+  }
+  .takeaway__image img {
+    display: none;
+  }
+
+  .takeaway__imagefull {
+    display: block;
+  }
+  .takeaway__imagefull img {
+    width: 100%;
+    height: 100%;
+    -webkit-transform: none;
+            transform: none;
+    display: inline-block;
+  }
+
+  .takeaway__description {
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .takeaway__title h2 {
+    font-size: 28px;
+  }
+
+  .takeaway__text {
+    margin: 0px 0px 20px 0px;
+  }
+}
+.testimonial {
+  padding: 60px 0 0 0;
+  margin: 0px 0px 120px 0px;
+}
+
+.testimonial__subtitle {
+  text-align: center;
+  margin: 0px 0px 12px 0px;
+}
+
+.testimonial__title {
+  text-align: center;
+  margin: 0px 0px 23px 0px;
+}
+
+.testimonial__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 0px 17px 0px;
+}
+.testimonial__text p {
+  width: 695px;
+  text-align: center;
+}
+
+.testimonial-slider {
+  text-align: center;
+  width: 804px;
+}
+
+.testimonial-slider__imagecontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: url("../img/Testimonial-vetor.svg") 48% 0 no-repeat;
+  height: 140px;
+}
+
+.testimonial-slider__image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 51px;
+          flex: 0 0 51px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.testimonial-slider__image img {
+  max-width: 100%;
+  display: block;
+}
+
+.testimonial-slider__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 0px 20px 0px;
+}
+.testimonial-slider__text p {
+  width: 506px;
+}
+
+.testimonialform {
+  text-align: center;
+  margin: 0px 0px 32px 0px;
+}
+
+.form_label {
+  margin: 0px 0px 10px 0px;
+}
+
+.testimonial-raiting {
+  position: relative;
+  font-size: 26px;
+  display: inline-block;
+}
+.testimonial-raiting::before {
+  content: "★★★★★";
+  display: block;
+}
+
+.testimonial-raiting__items {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  overflow: hidden;
+}
+
+.testimonial-raiting__item {
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+}
+
+.testimonial-raiting__label {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  height: 100%;
+  cursor: pointer;
+  color: #c4c4c4;
+}
+.testimonial-raiting__label::before {
+  content: "★";
+  display: block;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+}
+
+.testimonial-raiting__item:checked,
+.testimonial-raiting__item:checked ~ .testimonial-raiting__label {
+  color: #DC780B;
+}
+
+.testimonial-raiting__label:hover,
+.testimonial-raiting__label:hover ~ .testimonial-raiting__label,
+.testimonial-raiting__label:checked ~ .testimonial-raiting__label:hover {
+  color: #FFBA70;
+}
+
+.testimonial-slider__autor {
+  margin: 0px 0px 6px 0px;
+}
+.testimonial-slider__autor h3 {
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.testimonial-slider__designer h4 {
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: black;
+}
+
+.testimonial-slider .swiper-button-prev::after,
+.testimonial-slider .swiper-button-next::after {
+  font-size: 0px;
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+  .testimonial {
+    padding: 60px 15px 0 15px;
+  }
+
+  .testimonial-slider {
+    text-align: center;
+    width: 88%;
+  }
+
+  .testimonial-slider__text p {
+    width: 80%;
+    line-height: 107%;
+  }
+}
+@media (max-width: 480px) {
+  .testimonial {
+    padding: 240px 15px 0 15px;
+  }
+
+  .testimonial-slider {
+    text-align: center;
+    width: 100%;
+  }
+
+  .testimonial-slider__text p {
+    width: 80%;
+    line-height: 107%;
+  }
+}
+/* Landscape phones and portrait tablets, телефоны лопаты */
+@media (max-width: 767px) {
+  .testimonial {
+    margin: 0px 0px 80px 0px;
+  }
+
+  .testimonial__title {
+    margin: 0px 0px 20px 0px;
+  }
+
+  .testimonial__text p {
+    line-height: 100%;
+    width: 90%;
+  }
+
+  .testimonial-slider__text p {
+    line-height: 107%;
+  }
+
+  .testimonial-slider__imagecontainer {
+    height: 120px;
+  }
+
+  .testimonialform {
+    margin: 0px 0px 20px 0px;
+  }
+}
+/* Portrait phones and smaller типа моего 6s */
+@media (max-width: 480px) {
+  .testimonial {
+    margin: 0px 0px 80px 0px;
+  }
+
+  .testimonial__text p {
+    line-height: 100%;
+    width: 100%;
+  }
+
+  .testimonial__title h2 {
+    font-size: 28px;
+  }
+}
+/* Iphone 5 */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Large desktops and laptops */
+/* Landscape tablets and medium desktops */
+/* Portrait tablets and small desktops */
+/* Landscape phones and portrait tablets, телефоны лопаты */
+/* Portrait phones and smaller типа моего 6s */
+/* Iphone 5 */
